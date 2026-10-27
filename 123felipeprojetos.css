@@ -1,0 +1,234 @@
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080b12;
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+/* CABEÇALHO */
+.topo {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.topo h1 {
+    font-size: 32px;
+    color: #ffffff;
+}
+
+.topo span {
+    color: #3b82f6;
+}
+
+.topo p {
+    color: #9ca3af;
+    margin-top: 8px;
+}
+
+/* INTRODUÇÃO */
+.introducao {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+}
+
+.introducao h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.introducao p {
+    color: #9ca3af;
+    line-height: 1.6;
+}
+
+/* BARRA DE PESQUISA */
+.barra {
+    max-width: 1200px;
+    margin: 0 auto 20px;
+}
+
+.barra input {
+    width: 100%;
+    padding: 15px;
+    background: #111827;
+    color: white;
+    border: 1px solid #263247;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.barra input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 10px #3b82f633;
+}
+
+/* FILTROS */
+.filtros {
+    max-width: 1200px;
+    margin: 0 auto 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filtro {
+    padding: 10px 16px;
+    background: #111827;
+    color: #cbd5e1;
+    border: 1px solid #263247;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filtro:hover,
+.filtro.ativo {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+/* CONTADOR DE PROJETOS */
+.contador {
+    max-width: 1200px;
+    margin: 0 auto 20px;
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+/* GRADE DE PROJETOS */
+.projetos {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+}
+
+/* CARDS DOS PROJETOS */
+.projeto {
+    background: #111827;
+    border: 1px solid #263247;
+    border-radius: 14px;
+    padding: 24px;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.projeto:hover {
+    transform: translateY(-6px);
+    border-color: #3b82f6;
+    box-shadow: 0 10px 30px #00000055;
+}
+
+.projeto h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.projeto p {
+    color: #9ca3af;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+/* NÚMERO DO PROJETO */
+.numero {
+    display: inline-block;
+    color: #60a5fa;
+    background: #1e3a5f;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+/* TECNOLOGIAS */
+.tecnologia {
+    display: inline-block;
+    background: #1f2937;
+    color: #93c5fd;
+    padding: 6px 10px;
+    margin: 3px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+/* LINKS */
+.projeto a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #60a5fa;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.projeto a:hover {
+    color: #93c5fd;
+    text-decoration: underline;
+}
+
+/* QUANDO NÃO HÁ RESULTADOS */
+.vazio {
+    text-align: center;
+    color: #9ca3af;
+    padding: 40px 20px;
+}
+
+/* RODAPÉ */
+footer {
+    max-width: 1200px;
+    margin: 50px auto 0;
+    padding: 20px 0;
+    text-align: center;
+    color: #6b7280;
+    border-top: 1px solid #263247;
+}
+
+/* CELULARES */
+@media (max-width: 600px) {
+    body {
+        padding: 18px;
+    }
+
+    .topo {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .topo h1 {
+        font-size: 27px;
+    }
+
+    .introducao h2 {
+        font-size: 23px;
+    }
+
+    .projetos {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ACESSIBILIDADE */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
